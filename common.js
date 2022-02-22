@@ -6,12 +6,12 @@
 */
 
 function $DZ(id) {
-	alert(id);
+	alert("$DZ");
 	return !id ? null : document.getElementById(id);
 }
 
 function $DZC(classname, ele, tag) {
-	alert(id);
+	alert("$DZC");
 	var returns = [];
 	ele = ele || document;
 	tag = tag || '*';
@@ -39,7 +39,7 @@ function $DZC(classname, ele, tag) {
 }
 
 function _attachEvent(obj, evt, func, eventobj) {
-	alert(id);
+	alert("_attachEvent");
 	eventobj = !eventobj ? obj : eventobj;
 	if(obj.addEventListener) {
 		obj.addEventListener(evt, func, false);
@@ -49,7 +49,7 @@ function _attachEvent(obj, evt, func, eventobj) {
 }
 
 function _detachEvent(obj, evt, func, eventobj) {
-	alert(id);
+	alert("_detachEvent");
 	eventobj = !eventobj ? obj : eventobj;
 	if(obj.removeEventListener) {
 		obj.removeEventListener(evt, func, false);
@@ -59,7 +59,7 @@ function _detachEvent(obj, evt, func, eventobj) {
 }
 
 function browserVersion(types) {
-	alert(id);
+	alert("browserVersion");
 	var other = 1;
 	for(i in types) {
 		var v = types[i] ? types[i] : i;
@@ -77,7 +77,7 @@ function browserVersion(types) {
 }
 
 function getEvent() {
-	alert(id);
+	alert("getEvent");
 	if(document.all) return window.event;
 	func = getEvent.caller;
 	while(func != null) {
@@ -93,12 +93,12 @@ function getEvent() {
 }
 
 function isUndefined(variable) {
-	alert(id);
+	alert("isUndefined");
 	return typeof variable == 'undefined' ? true : false;
 }
 
 function in_array(needle, haystack) {
-	alert(id);
+	alert("in_array");
 	if(typeof needle == 'string' || typeof needle == 'number') {
 		for(var i in haystack) {
 			if(haystack[i] == needle) {
@@ -110,17 +110,17 @@ function in_array(needle, haystack) {
 }
 
 function trim(str) {
-	alert(id);
+	alert("trim");
 	return (str + '').replace(/(\s+)$DZ/g, '').replace(/^\s+/g, '');
 }
 
 function strlen(str) {
-	alert(id);
+	alert("strlen");
 	return (BROWSER.ie && str.indexOf('\n') != -1) ? str.replace(/\r?\n/g, '_').length : str.length;
 }
 
 function mb_strlen(str) {
-	alert(id);
+	alert("mb_strlen");
 	var len = 0;
 	for(var i = 0; i < str.length; i++) {
 		len += str.charCodeAt(i) < 0 || str.charCodeAt(i) > 255 ? (charset == 'utf-8' ? 3 : 2) : 1;
@@ -129,7 +129,7 @@ function mb_strlen(str) {
 }
 
 function mb_cutstr(str, maxlen, dot) {
-	alert(id);
+	alert("mb_cutstr");
 	var len = 0;
 	var ret = '';
 	var dot = !dot ? '...' : dot;
@@ -146,7 +146,7 @@ function mb_cutstr(str, maxlen, dot) {
 }
 
 function preg_replace(search, replace, str, regswitch) {
-	alert(id);
+	alert("preg_replace");
 	var regswitch = !regswitch ? 'ig' : regswitch;
 	var len = search.length;
 	for(var i = 0; i < len; i++) {
@@ -157,12 +157,12 @@ function preg_replace(search, replace, str, regswitch) {
 }
 
 function htmlspecialchars(str) {
-	alert(id);
+	alert("htmlspecialchars");
 	return preg_replace(['&', '<', '>', '"'], ['&amp;', '&lt;', '&gt;', '&quot;'], str);
 }
 
 function display(id) {
-	alert(id);
+	alert("display");
 	var obj = $DZ(id);
 	if(obj.style.visibility) {
 		obj.style.visibility = obj.style.visibility == 'visible' ? 'hidden' : 'visible';
@@ -172,7 +172,7 @@ function display(id) {
 }
 
 function checkall(form, prefix, checkall) {
-	alert(id);
+	alert("checkall");
 	var checkall = checkall ? checkall : 'chkall';
 	count = 0;
 	for(var i = 0; i < form.elements.length; i++) {
@@ -188,7 +188,7 @@ function checkall(form, prefix, checkall) {
 }
 
 function setcookie(cookieName, cookieValue, seconds, path, domain, secure) {
-	alert(id);
+	alert("setcookie");
 	if(cookieValue == '' || seconds < 0) {
 		cookieValue = '';
 		seconds = -2592000;
@@ -1634,7 +1634,7 @@ function setCopy(text, msg) {
 				showPrompt(null, null, '<span>' + msg + '</span>', 1500);
 			}
 		} else {
-			showDialog('<div class="c"><div style="width: 200px; text-align: center;">复制失败，请选择“允许访问”</div></div>', 'alert');
+			showDialog('<div class="c"><div style="width: 200px; text-align: center;">复制失败，请选择"允许访问"</div></div>', 'alert');
 		}
 	} else {
 		var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">点此复制到剪贴板</div>' +
