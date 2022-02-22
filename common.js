@@ -91,7 +91,7 @@ function getEvent() {
 	}
 	return null;
 }
-/**
+/*
 function isUndefined(variable) {
 	console.log("isUndefined");
 	return typeof variable == 'undefined' ? true : false;
