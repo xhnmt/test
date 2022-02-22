@@ -59,7 +59,7 @@ function _detachEvent(obj, evt, func, eventobj) {
 }
 
 function browserVersion(types) {
-	alert("browserVersion");
+	debugger;
 	var other = 1;
 	for(i in types) {
 		var v = types[i] ? types[i] : i;
@@ -93,7 +93,7 @@ function getEvent() {
 }
 
 function isUndefined(variable) {
-	alert("isUndefined");
+	debugger;
 	return typeof variable == 'undefined' ? true : false;
 }
 
