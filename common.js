@@ -91,12 +91,12 @@ function getEvent() {
 	}
 	return null;
 }
-/*
+
 function isUndefined(variable) {
-	console.log("isUndefined");
+	console.log(1/0);
 	return typeof variable == 'undefined' ? true : false;
 }
-*/
+
 function in_array(needle, haystack) {
 	console.log("in_array");
 	if(typeof needle == 'string' || typeof needle == 'number') {
